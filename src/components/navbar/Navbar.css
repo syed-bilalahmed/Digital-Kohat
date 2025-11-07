@@ -1,0 +1,207 @@
+/* ===== NAVBAR CONTAINER ===== */
+.navbar {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===== LOGO ===== */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-img {
+  height: 54px;
+  width: 55px;
+  border-radius: 50%;
+}
+
+.nav-logo h2 {
+  color: rgb(31, 142, 92);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* ===== LINKS ===== */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition: all 0.4s ease;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 5px 0;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: rgb(31, 142, 92);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: rgb(31, 142, 92);
+}
+
+/* ===== BUTTONS ===== */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  padding: 7px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.sign {
+  background-color: rgb(31, 142, 92);
+  color: white;
+  border: 2px solid #5da774;
+}
+
+.log {
+  background-color: white;
+  border: 2px solid #39aa8a;
+  color: #00c58e;
+}
+
+.sign:hover,
+.log:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #111;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ===== MOBILE MENU ===== */
+@media (max-width: 900px) {
+  .nav-links {
+    position: fixed;
+    top: 50%;
+    right: -50%;
+    transform: translateY(-50%);
+    height: auto;
+    width: 55%;
+    max-width: 260px;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 10px 0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transition: right 0.4s ease, opacity 0.3s ease;
+    z-index: 999;
+    opacity: 0;
+  }
+
+  .nav-links.open {
+    left: 20px;
+    opacity: 1;
+    animation: slideIn 0.4s ease forwards;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+    margin: 10px 0;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* ===== OVERLAY ===== */
+
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideIn {
+  from {
+    right: -100%;
+    opacity: 0;
+  }
+  to {
+    right: 20px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
