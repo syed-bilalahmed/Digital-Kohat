@@ -307,7 +307,7 @@ hr {
 
   .footer-links {
     flex-direction: row;
- margin-left: 25px;
+ margin-left: 35px;
   margin-top: -30px;
   }
 
@@ -319,10 +319,12 @@ hr {
     font-size: 0.9rem;
   }
   .contact-info{
-    margin-left: 10px;
+    margin-left: 15px;
    
   }
-
+ .footer-right{
+ margin-right: 34px;
+ }
   .subscribe-box {
     flex-direction: column;
     max-width: 90%;

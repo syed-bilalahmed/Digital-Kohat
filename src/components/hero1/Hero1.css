@@ -63,7 +63,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2; /* above blur & overlay */
+  z-index: 2;
   text-align: center;
 }
 
@@ -72,7 +72,12 @@
   z-index: 3;
   padding: 0 20px;
   max-width: 800px;
-}.hero-subtitle {
+}
+
+/* ================================
+   HERO TEXT STYLES
+================================ */
+.hero-subtitle {
   font-family: 'Poppins', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
@@ -163,7 +168,7 @@
   }
 }
 
-
+/* Button */
 .hero-btn {
   background: #00a86b;
   color: #fff;
@@ -199,7 +204,7 @@
 .about-content {
   flex: 1;
   min-width: 300px;
-  text-align: left; /* Always left aligned */
+  text-align: left;
 }
 
 .about-content h2 {
@@ -279,13 +284,12 @@
 
   .about-content p {
     font-size: 0.95rem;
-     margin-left: 5px;
+    margin-left: 5px;
     margin-right: 5px;
   }
 
   .about-image img {
-    max-width: 0%;
-    margin-right: 5px;
+    max-width: 100%;
   }
 }
 
@@ -319,6 +323,47 @@
 
   .about-image img {
     max-width: 100%;
-   
+  }
+}
+
+/* ======================================
+   ✅ FIX: Responsive Hero Image Adjustments
+   ====================================== */
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 65vh;
+  }
+
+  .hero-slide {
+    height: 65vh;
+  }
+
+  .hero-bg {
+    background-size: contain; /* prevents cropping */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 65vh;
+    filter: blur(0.3px) brightness(0.8);
+  }
+
+  .hero-overlay {
+    align-items: flex-end;
+    padding-bottom: 60px;
+  }
+
+  .hero-content {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-slider,
+  .hero-slide,
+  .hero-bg {
+    height: 55vh;
+  }
+
+  .hero-bg {
+    background-size: contain;
   }
 }
