@@ -149,3 +149,126 @@
     transform: translateY(-8px);
   }
 }
+
+/* ✅ RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+  .titlee {
+    margin-left: 50px;
+    font-size: 2rem;
+  }
+
+  .roadmap {
+    height: 260px;
+  }
+
+  .step {
+    width: 160px;
+  }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .titlee {
+    font-size: 1.8rem;
+    margin-left: 30px;
+  }
+
+  .roadmap {
+    height: 220px;
+  }
+
+  .step h3 {
+    font-size: 1rem;
+  }
+
+  .step p {
+    font-size: 0.85rem;
+  }
+
+  .step {
+    width: 140px;
+  }
+  /* adjust positions */
+  .step1 { top: 60%; left: 2%; }
+  .step2 { top: 0%; left: 20%; }
+  .step3 { top: 60%; left: 48%; }
+  .step4 { top: 0%; left: 72%; }
+}
+
+
+
+
+
+
+@media (max-width: 576px) {
+  .titlee {
+    font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 6px;
+  margin: 0 auto 30px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  }
+  .titlee::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #00c68a;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+.titlee:hover {
+  color: #0e0e0e;
+}
+
+.titlee:hover::after {
+  width: 70%;
+}
+  .roadmap {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .road-svg {
+   position: relative;
+  }
+
+  .step {
+    position: static;
+    width: 90%;
+    margin: 20px auto;
+    animation: none;
+  }
+
+  .circle {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+  .step h3 {
+    font-size: 1rem;
+  }
+
+  .step p {
+    font-size: 0.85rem;
+}
+}
